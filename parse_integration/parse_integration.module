@@ -69,7 +69,7 @@ function parse_integration_node_update($node) {
                 // error is a ParseException with an error code and message.
             }
     }
-    watchdog('load', 'Updated article!');
+    watchdog('load', 'Updated event!');
 }
 
 /**
