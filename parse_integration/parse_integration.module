@@ -54,7 +54,7 @@ function parse_integration_node_update($node) {
         case
         'article':
             $query = new ParseQuery("Test");
-            $query->equalTo("vid", $node->vid);
+            $query->equalTo("vid", $node->nid);
             try {
                 $results = $query->first();
                 if (count($results) != 0) {
@@ -158,7 +158,7 @@ function parse_integration_node_delete($node)
 
     watchdog('load', 'Updated article!');
     $query = new ParseQuery("Test");
-    $query->equalTo("vid", $node->vid);
+    $query->equalTo("vid", $node->nid);
     try {
         $results = $query->first();
         if (count($results) != 0) {
